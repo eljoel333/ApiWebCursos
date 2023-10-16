@@ -1,29 +1,26 @@
 package com.jgh.cursos.dto;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.jgh.cursos.model.Curso;
-import com.jgh.cursos.model.RegistrarMatricula;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DetalleMatricula {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class DetalleMatriculaDTO {
 
 
-    private Integer idDetalleMatricula;
-    //private RegistrarMatricula registrarMatricula;
 
-    @JsonBackReference
     private Curso curso;
 
     private String aula;
 
 
+    private RegistrarMatriculaDTO registrarMatriculaDTO;
 
 
 }

@@ -15,20 +15,20 @@ import org.antlr.v4.runtime.misc.NotNull;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CursoDTO {
 
-    private Integer idCurso;
+    private Integer id;
 
     @NotNull
     @NotEmpty
     @Size(min = 3, max = 40)
-    private String nombreCurso;
+    private String nombre;
 
     @NotNull
     @NotEmpty
     @Size(min = 3, max = 10)
-    private String siglasCurso;
+    private String siglas;
 
     @NotNull
-    private boolean estadoCurso;
+    private boolean estado;
 
 
 

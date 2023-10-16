@@ -48,7 +48,7 @@ public class CursoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<CursoDTO> update(@Valid @RequestBody CursoDTO dto, @PathVariable("id") Integer id) throws Exception{
-        dto.setIdCurso(id);
+        dto.setId(id);
         Curso obj = service.update(convertToEntity(dto), id);
         return new ResponseEntity<>(convertToDto(obj), HttpStatus.OK);
     }
