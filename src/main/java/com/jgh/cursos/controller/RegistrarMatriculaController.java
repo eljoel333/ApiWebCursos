@@ -43,7 +43,7 @@ public class RegistrarMatriculaController {
 
 
     @PostMapping()
-    public ResponseEntity<RegistrarMatriculaDTO> create(@RequestBody RegistrarMatriculaDTO dto) throws Exception{
+    public ResponseEntity<RegistrarMatriculaDTO> create(@Valid @RequestBody RegistrarMatriculaDTO dto) throws Exception{
         RegistrarMatricula obj = service.save(convertToEntity(dto));
         return new ResponseEntity<>(convertToDto(obj), HttpStatus.CREATED);
     }

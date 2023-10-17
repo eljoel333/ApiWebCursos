@@ -29,7 +29,7 @@ public class RegistrarMatricula {
     private Estudiante estudiante;
 
     @OneToMany(mappedBy = "registrarMatricula", cascade = CascadeType.ALL) //, fetch = FetchType.LAZY)
-    @JsonManagedReference
+    //@JsonManagedReference
     private List<DetalleMatricula> detalleMatricula;
 
 

@@ -30,6 +30,7 @@ public class RegistrarMatriculaDTO {
 
 
     @NotNull
+    @JsonManagedReference
     private List<DetalleMatriculaDTO> detalleMatricula;
 
     @NotNull
